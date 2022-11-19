@@ -51,4 +51,14 @@ public class Flower extends Item {
         this.price = price;
 
     }
+    public Flower(double sepalLength, String color, double price) {
+        this.price = price;
+        this.sepalLength = sepalLength;
+        switch (color) {
+            case "red" -> this.color = FlowerColor.RED;
+            case "blue" -> this.color = FlowerColor.BLUE;
+            case "green" -> this.color = FlowerColor.GREEN;
+            default -> this.color = FlowerColor.WHITE;
+        }
+    }
 }
