@@ -25,8 +25,8 @@ public class FlowerController {
     }
 
     @PostMapping
-    public void addFlower(Flower flower) {
-        flowerService.addFlower(flower);
+    public void addFlower(double sepalLength, double price, FlowerColor color) {
+        this.flowerService.addFlower(sepalLength, price, color);
 
     }
 }

@@ -17,7 +17,7 @@ public class FlowerService {
         return  flowerRepository.findAll();
     }
 
-    public void addFlower(@RequestBody Flower flower) {
-        flowerRepository.save(flower);
+    public void addFlower(double sepalLength, double price, FlowerColor color) {
+        this.flowerRepository.save(new Flower(color, price, sepalLength));
     }
 }
